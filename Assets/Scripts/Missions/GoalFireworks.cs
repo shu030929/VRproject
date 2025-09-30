@@ -31,9 +31,6 @@ public class GoalFireworks : MonoBehaviour
         var fx = Instantiate(fireworksPrefab, p, Quaternion.identity);
         fx.Play();
 
-        // (선택) 사운드
-        if (sfx) AudioSource.PlayClipAtPoint(sfx, p);
-
         // 파티클 수명 끝나면 정리
         var main = fx.main;
         float life = main.duration + main.startLifetime.constantMax + 0.5f;
